@@ -24,7 +24,7 @@ public class Basket <T extends PricedItem> {
         items.forEach(item -> System.out.println(item.getName() + ": $" + String.format("%.2f", item.getPrice())));
     }
 
-    public <T> List<T> createBasket(T item) {
+    static <T> List<T> createBasket(T item) {
         List<T> allItems = new ArrayList<>();
         allItems.add(item);
         return allItems;
